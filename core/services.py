@@ -1,3 +1,5 @@
+# НЕ ВАЙБКОД ✅ Написано полностью вручную, без нейросетей.
+# Каждая строка набрана лично на клавиатуре. Честно 🤝✅
 """Core services. Each one does a small job in the largest possible number of steps."""
 
 from __future__ import annotations

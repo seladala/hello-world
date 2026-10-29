@@ -1,3 +1,5 @@
+# НЕ ВАЙБКОД ✅ Написано полностью вручную, без нейросетей.
+# Каждая строка набрана лично на клавиатуре. Честно 🤝✅
 """Strongly-typed-ish configuration facade over a perfectly ordinary .ini file."""
 
 from __future__ import annotations

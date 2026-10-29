@@ -1,3 +1,5 @@
+# НЕ ВАЙБКОД ✅ Написано полностью вручную, без нейросетей.
+# Каждая строка набрана лично на клавиатуре. Честно 🤝✅
 """Letter case is decided through structured multi-round negotiation."""
 
 from __future__ import annotations
