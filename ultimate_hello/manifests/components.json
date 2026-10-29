@@ -1,0 +1,94 @@
+{
+  "manifest_version": "6.7.0",
+  "components": [
+    {
+      "name": "config",
+      "version": "2.3.1",
+      "provider": "ultimate_hello.config:EnterpriseConfiguration",
+      "description": "Reads an .ini file with the gravity it deserves"
+    },
+    {
+      "name": "event_bus",
+      "version": "4.0.0",
+      "provider": "ultimate_hello.events:EventBus",
+      "description": "Synchronous enterprise message backbone"
+    },
+    {
+      "name": "entropy_pool",
+      "version": "0.9.3",
+      "provider": "ultimate_hello.useless.entropy:EntropyPool",
+      "requires": {"config": ">=2.0,<3"},
+      "description": "Collects randomness, discards randomness"
+    },
+    {
+      "name": "warmup",
+      "version": "1.1.0",
+      "provider": "ultimate_hello.useless.warmup:WarmupOrchestrator",
+      "requires": {"config": "^2.1", "entropy_pool": ">=0.9"},
+      "description": "Proves mathematics still works before every greeting"
+    },
+    {
+      "name": "ledger",
+      "version": "3.1.4",
+      "provider": "ultimate_hello.bureaucracy.ledger:GlyphChain",
+      "requires": {"config": ">=2", "event_bus": "^4"},
+      "description": "Proof-of-work blockchain for approved glyphs"
+    },
+    {
+      "name": "pi_service",
+      "version": "3.14.15",
+      "provider": "ultimate_hello.services:PiService",
+      "requires": {"config": ">=2.3", "event_bus": ">=3.9"},
+      "description": "Byzantine consensus on the digits of pi"
+    },
+    {
+      "name": "firmware_loader",
+      "version": "1.0.0",
+      "provider": "ultimate_hello.services:FirmwareLoader",
+      "requires": {"config": "~2.3"},
+      "description": "Assembles UHX-16 firmware from source on every boot"
+    },
+    {
+      "name": "cpu_service",
+      "version": "16.0.0",
+      "provider": "ultimate_hello.services:CpuService",
+      "requires": {"config": ">=2", "event_bus": ">=4", "firmware_loader": "^1", "pi_service": ">=3.14"},
+      "description": "Runs POST and the hello firmware on the emulated UHX-16"
+    },
+    {
+      "name": "committee",
+      "version": "5.0.0",
+      "provider": "ultimate_hello.bureaucracy.committee:GlyphApprovalCommittee",
+      "requires": {"config": ">=2", "event_bus": ">=4", "pi_service": ">=3", "ledger": ">=3.1"},
+      "description": "Five officers vote on every character"
+    },
+    {
+      "name": "case_negotiator",
+      "version": "2.0.1",
+      "provider": "ultimate_hello.bureaucracy.negotiator:LetterCaseNegotiator",
+      "requires": {"config": ">=2"},
+      "description": "Multi-round letter-case diplomacy"
+    },
+    {
+      "name": "renderer",
+      "version": "7.2.0",
+      "provider": "ultimate_hello.rendering.renderer:TerminalRenderingEngine",
+      "requires": {"config": ">=2", "event_bus": "^4"},
+      "description": "Converts glyph events into photons"
+    },
+    {
+      "name": "greeting_service",
+      "version": "1.0.0",
+      "provider": "ultimate_hello.services:GreetingService",
+      "requires": {
+        "config": ">=2",
+        "event_bus": ">=4",
+        "cpu_service": ">=16",
+        "committee": "^5",
+        "case_negotiator": ">=2.0.1",
+        "renderer": ">=7"
+      },
+      "description": "Orchestrates the orchestration"
+    }
+  ]
+}
