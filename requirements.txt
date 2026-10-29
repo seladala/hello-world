@@ -1,5 +1,1 @@
-# External dependencies: none. Python >= 3.10 standard library only.
-#
-# All bloat in this project is artisanal and home-grown. Internal component
-# dependencies (with semver constraints, cycle detection and topological boot
-# order) are declared in ultimate_hello/manifests/components.json.
+# No external dependencies.

@@ -1,0 +1,13 @@
+{
+  "product": "hello-world",
+  "edition": "Community",
+  "licensee": "Everyone",
+  "seats": 1,
+  "issued": "2026-10-29",
+  "expires": null,
+  "entitlements": [
+    "greeting.produce",
+    "greeting.render"
+  ],
+  "signature": "972efcd98d5359e4b5d291dccaa4b6b5b3a9d7e922e79db01fb8e40fc049b5a5"
+}
